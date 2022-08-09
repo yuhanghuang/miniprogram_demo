@@ -1,0 +1,27 @@
+<!--custom-tab-bar/index.wxml-->
+<!-- <text>custom-tab-bar/index.wxml</text> -->
+<!-- <text>这是自己定义的Tabbar</text> -->
+<!-- <van-tabbar active="{{ active }}" bind:change="onChange"> -->
+<van-tabbar bind:change="onChange" active="{{active}}" active-color="#1234ed">
+    <van-tabbar-item  wx:for="{{list}}" wx:key="index" info="{{item.info ? item.info : ''}}">
+    <image
+      slot="icon"
+      src="{{item.iconPath}}"
+      mode="aspectFit"
+      style="width: 30px; height: 18px;"
+    />
+    <image
+      slot="icon-active"
+      src="{{item.selectedIconPath}}"
+      mode="aspectFit"
+      style="width: 25px; height: 25px;"
+    />
+    {{item.text}}
+  </van-tabbar-item>
+  <!-- <van-tabbar-item icon="home-o">标签</van-tabbar-item>
+  <van-tabbar-item icon="search">标签</van-tabbar-item>
+  <van-tabbar-item icon="friends-o">标签</van-tabbar-item>
+  <van-tabbar-item icon="setting-o">标签</van-tabbar-item> -->
+
+</van-tabbar>
+

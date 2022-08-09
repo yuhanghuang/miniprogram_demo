@@ -1,0 +1,72 @@
+{
+    "pages":[
+        "pages/home/home",
+      "pages/message/message",
+      "pages/contact/contact"
+      
+    ],
+    "preloadRule": {
+        "pages/contact/contact":{
+            "packages": ["pkgA"],
+            "network": "all"
+        }
+    },
+    "subPackages": [
+        {
+            "root":"pkgA",
+            "name": "p1",
+            "pages": [
+                "pages/cat/cat",
+                "pages/dog/dog"
+            ]
+        },
+        {
+            "root": "pkgB",
+            "name": "p2",
+            "pages": [
+                "pages/apple/apple"
+            ],
+            "independent": true
+        }
+    ],
+    "window":{
+      "backgroundTextStyle":"dark",
+      "navigationBarBackgroundColor": "#fff",
+      "navigationBarTitleText": "小程序demo",
+      "navigationBarTextStyle":"white",
+      "enablePullDownRefresh":true,
+      "backgroundColor":"#ff34ff"
+    },
+    "tabBar": {
+        "custom": true,
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "text": "首页",
+                "selectedIconPath": "./images/home.png",
+                "iconPath": "./images/home.png"
+  
+            },
+            {
+                  "pagePath": "pages/contact/contact",
+                  "text": "联系",
+                  "selectedIconPath": "./images/contact.png",
+                  "iconPath": "./images/contact.png"
+            },
+            {
+              "pagePath": "pages/message/message",
+              "text": "信息",
+              "selectedIconPath": "./images/message.png",
+              "iconPath": "./images/message.png"
+        }
+        ]
+    },
+    "sitemapLocation": "sitemap.json",
+    "usingComponents": {
+        "van-button": "@vant/weapp/button/index",
+        "my-numbers":"./components/numbers/numbers",
+        "van-tabbar": "@vant/weapp/tabbar/index",
+        "van-tabbar-item": "@vant/weapp/tabbar-item/index"
+      }
+  }
+  

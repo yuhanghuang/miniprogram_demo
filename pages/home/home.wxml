@@ -1,0 +1,6 @@
+<!--pages/home/home.wxml-->
+<text>pages/home/home.wxml</text>
+<!-- <van-button type="primary" bindtap="btnHundker1" data-step="{{1}}">numA+1</van-button> -->
+<!-- <view>{{numA}} + {{numB}} = {{sum}}</view>
+<van-button type="primary" bindtap="btnHundker1" data-step="{{1}}">numA+1</van-button>
+<van-button type="danger" bindtap="btnHundker1" data-step="{{-1}}">numA-1</van-button> -->
